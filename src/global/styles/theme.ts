@@ -1,6 +1,7 @@
 export default {
     colors: {
-        primary: '#151529',
+        primary: '#151119',
+        blue: '#4285F4',
 
         secondary:  '#F7FAFC',
         
@@ -14,7 +15,7 @@ export default {
         title: '#3F3F5F',
         text: '#969CB2',
         text_dark: '#000000',
-        background: '#E2E8F0',
+        background: '#EEEEEE',
     },
 
     fonts: {

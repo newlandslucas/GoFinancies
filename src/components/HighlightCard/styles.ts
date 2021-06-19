@@ -9,7 +9,7 @@ interface TypeProps {
 
 export const Container = styled.View<TypeProps>`
     background-color: ${({ theme, type }) =>
-        type === 'total' ? theme.colors.primary : theme.colors.shape};
+        type === 'total' ? theme.colors.blue : theme.colors.shape};
 
     width: ${RFValue(300)}px;
     border-radius: 5px;
@@ -51,7 +51,7 @@ export const Footer = styled.View``;
 
 export const Amount = styled.Text<TypeProps>`
 
-    font-family: ${({ theme}) => theme.fonts.medium};
+    font-family: ${({ theme }) => theme.fonts.medium};
     font-size: ${RFValue(32)}px;
 
     color: ${({ theme, type }) =>

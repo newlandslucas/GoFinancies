@@ -1,4 +1,5 @@
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionsCard } from '../../components/TransactionsCard';
 import {
@@ -30,10 +31,12 @@ export function Dashboard() {
                             <UserGreeting>Olá, </UserGreeting>
                             <UserName>Lucas</UserName>
                         </User>
-                    </UserInfo>
-                    <Icon name="power"/>
-                  
 
+                    </UserInfo>
+                    <TouchableOpacity>
+                        <Icon name="power"/>
+                    </TouchableOpacity>
+    
                 </UserWrapper>
 
             </Header>
@@ -59,7 +62,6 @@ export function Dashboard() {
                     lastTransaction="ültima entrada dia 13 de abril"
                 />
             </HighlightCards>
-
 
             <Transactions>
                 <Title>

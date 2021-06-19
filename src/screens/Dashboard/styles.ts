@@ -13,7 +13,7 @@ export const Header = styled.View`
     width: 100%;
     height: ${RFPercentage(42)}px;
 
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.shape};
 
     justify-content: center;
     align-items: flex-start;
@@ -48,22 +48,22 @@ export const User = styled.View`
 `;
 
 export const UserGreeting = styled.Text`
-    color: ${({ theme}) => theme.colors.shape};
+    color: ${({ theme}) => theme.colors.text_dark};
 
     font-size: ${RFValue(18)}px;
     font-family: ${({ theme}) => theme.fonts.regular};
 `;
 
 export const UserName = styled.Text`
-    color: ${({ theme}) => theme.colors.shape};
+    color: ${({ theme}) => theme.colors.blue};
 
-    font-size: ${RFValue(18)}px;
+    font-size: ${RFValue(20)}px;
     font-family: ${({ theme}) => theme.fonts.bold};
 
 `;
 
 export const Icon = styled(Feather)`
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.text_dark};
     font-size: ${RFValue(24)}px;
 `;
 
@@ -86,7 +86,8 @@ export const Transactions = styled.View`
 `;
 export const Title = styled.Text`
     font-size: ${RFValue(18)}px;
-    font-family: ${({ theme}) => theme.fonts.regular};
+    font-family: ${({ theme }) => theme.fonts.regular};
+    color: ${({ theme}) => theme.colors.text_dark};
 
     margin-bottom: 16px;
 
