@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { HighlightCard } from '../../components/HighlightCard';
-import { TransactionsCard } from '../../components/TransactionsCard';
+import { TransactionsCard, TransactionCardProps } from '../../components/TransactionsCard';
 import {
      Container, 
      Header,
@@ -14,11 +14,52 @@ import {
      Icon,
      HighlightCards,
      Transactions,
-     Title
+     Title,
+     TransactionList
     } from './styles';
 
 
+export interface DataListProps extends TransactionCardProps {
+    id: string;
+}
+
 export function Dashboard() {
+    const data: DataListProps[] = [
+    {
+        id: '1',
+        type: 'positive',
+        title:"Desenvolvimento de site",
+        amount:"R$12.000,00",
+        category:{
+            name: 'Vendas',
+            icon: 'dollar-sign'
+        },
+        date:"19/06/2021" 
+    },
+    {
+        id: '2',
+        type: 'negative',
+        title:"Geléia hamburgueria",
+        amount:"R$59,00",
+        category:{
+            name: 'ALimentação',
+            icon: 'coffee'
+        },
+        date:"19/06/2021" 
+    },
+    {
+        id: '3',
+        type: 'negative',
+        title:"Parcela Up-Tsi",
+        amount:"R$1.200,00",
+        category:{
+            name: 'Automotivo',
+            icon: 'shopping-bag'
+        },
+        date:"19/06/2021" 
+    },
+]
+
     return(
         <Container>
             <Header>
@@ -64,11 +105,14 @@ export function Dashboard() {
             </HighlightCards>
 
             <Transactions>
-                <Title>
-                    Listagem
-                </Title>
+                <Title>Listagem</Title>
 
-                <TransactionsCard />
+                <TransactionList
+                 data={data}
+                 keyExtractor={item => item.id}
+                 renderItem={({ item }) => <TransactionsCard data={item} />}
+                 />
+
             </Transactions>
         </Container>
     )
